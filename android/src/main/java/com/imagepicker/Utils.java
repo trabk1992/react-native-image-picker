@@ -499,9 +499,9 @@ public class Utils {
                     uri = getAppSpecificStorageUri(uri, context);
                 }
                 uri = resizeImage(uri, context, options);
-                assets.pushMap(getImageResponseMap(uri, options, context));
+                assets.pushMap((WritableMap)getImageResponseMap(uri, options, context));
             } else if (isVideoType(uri, context)) {
-                assets.pushMap(getVideoResponseMap(uri, options, context));
+                assets.pushMap((WritableMap)getVideoResponseMap(uri, options, context));
             } else {
                 throw new RuntimeException("Unsupported file type");
             }
